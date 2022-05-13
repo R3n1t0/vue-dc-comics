@@ -3,35 +3,8 @@
     <img src="../assets/img/dc-logo.png" alt="DC Logo">
     <nav>
       <ul>
-        <li>
-          <a href="#">CHARACTERS</a>
-        </li>
-        <li>
-          <a href="#">COMICS</a>
-        </li>
-        <li>
-          <a href="#">MOVIES</a>
-        </li>
-        <li>
-          <a href="#">TV</a>
-        </li>
-        <li>
-          <a href="#">GAMES</a>
-        </li>
-        <li>
-          <a href="#">COLLECTIBLES</a>
-        </li>
-        <li>
-          <a href="#">VIDEOS</a>
-        </li>
-        <li>
-          <a href="#">FANS</a>
-        </li>
-        <li>
-          <a href="#">NEWS</a>
-        </li>
-        <li>
-          <a href="#">SHOP</a>
+        <li v-for="(item, index) in opzioniMenu" :key="`menu-${index}`">
+          <a :href="item.href">{{item.name}}</a>
         </li>
       </ul>
     </nav>
@@ -41,7 +14,64 @@
 <script>
 
 export default {
-  name: "HeaderComponent"
+  name: "HeaderComponent",
+
+   data(){
+    return{
+      opzioniMenu: [
+        {
+          name: "CHARACTERS",
+          href: "#",
+          isActive: false
+        },
+        {
+          name: "COMICS",
+          href: "#",
+          isActive: true
+        },
+        {
+          name: "MOVIES",
+          href: "#",
+          isActive: false
+        },
+        {
+          name: "TV",
+          href: "#",
+          isActive: false
+        },
+        {
+          name: "GAMES",
+          href: "#",
+          isActive: false
+        },
+        {
+          name: "COLLECTIBLES",
+          href: "#",
+          isActive: false
+        },
+        {
+          name: "VIDEOS",
+          href: "#",
+          isActive: false
+        },
+        {
+          name: "FANS",
+          href: "#",
+          isActive: false
+        },
+        {
+          name: "NEWS",
+          href: "#",
+          isActive: false
+        },
+        {
+          name: "SHOP",
+          href: "#",
+          isActive: false
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -51,6 +81,7 @@ export default {
 
   header{
     @include between();
+    width: 80%;
     height: 140px;
     img{
       width: 80px;
@@ -59,19 +90,17 @@ export default {
     ul{
       @include between();
       list-style: none;
-      li{
-        padding: 25px 15px; 
-        &:hover{
-          outline: 5px solid $primary-color;
-        }
-        a{
+      a{
         text-decoration: none;
         color: black;
         font-size: 10px;
         font-weight: bold;
+        padding: 0px 15px;
+        &:hover{
+          color: $primary-color;
         }
       }
-      
+ 
     }
     
   }
