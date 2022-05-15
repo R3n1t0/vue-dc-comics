@@ -3,7 +3,7 @@
     <div class="container">
       <div class="credits">
         <div class="dc-shop">
-          <h5>DC COMIMCS</h5> 
+          <h5>DC COMICS</h5> 
           <ul>
             <li>Characters</li>
             <li>Comics</li>

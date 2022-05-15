@@ -52,7 +52,7 @@ export default {
       }
 
       img{
-        margin: 10px;
+        margin-left: 20px;
       }
     }
   }
