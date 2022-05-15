@@ -73,16 +73,18 @@ export default {
     }
   }
 }
+
 </script>
 
 <style lang="scss" scoped>
+
   @import "../assets/style/_vars.scss";
   @import "../assets/style/_mixin.scss";
 
   header{
     @include between();
-    width: 80%;
-    height: 140px;
+    width: 70%;
+    height: 120px;
     img{
       width: 80px;
       height: 80px;
