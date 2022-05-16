@@ -1,24 +1,36 @@
 <template>
   <main>
-    <div class="container"></div>
-    <h1> --- Contents goes here --- </h1>
+    <div class="jumbotron"></div>
+    <CardsComponent
+      
+    />
+    
   </main>
 </template>
 
 <script>
+/* import comicsCards from "../assets/data/comicsCards" */
+import CardsComponent from "../components/CardsComponent.vue"
+
 export default {
-  name: "MainComponent"
+  name: "MainComponent",
+
+  components: {
+    CardsComponent
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 
 main{
-  height: 150px;
   background-color: #1c1c1c;
-  h1{
-    color: white;
+
+  .jumbotron{
+    width: 100%;
+    height: 400px;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-size: cover;
   }
 }
-
 </style>
